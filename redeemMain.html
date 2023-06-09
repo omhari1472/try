@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redeem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 0;
+            margin:0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            color: #03446A;
+        }
+
+        p {
+            margin: 0 0 10px;
+            color: #666;
+        }
+
+        #points {
+            font-weight: bold;
+            color: #03446A;
+        }
+
+        #rewardSelect,
+        #redeemButton {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        #redeemButton {
+            background-color: #03446A;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color:#a3f2ac;">
+        <!-- <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="greenReviveLOGO.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
+            <b>GreenRevive</b>
+          </a>
+        </div> -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">GreenRevive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="redeemMain.html">Redeem Points</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="user.html">SIGN UP</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Reward Redemption</h1>
+        <p>Points: <span id="points">700</span></p>
+        <p>Select a reward:</p>
+        <select id="rewardSelect">
+            <option value="1">Reward 1 ($10)</option>
+            <option value="2">Reward 2 ($20)</option>
+            <option value="3">Reward 3 ($30)</option>
+        </select>
+        <button id="redeemButton">Redeem Reward</button>
+    </div>
+
+    <script>
+        // User object with initial points
+        let user = {
+            points: 700
+        };
+
+        // Array of rewards
+        const rewards = [
+            { id: 1, name: "Reward 1", points: 100, amount: 10 },
+            { id: 2, name: "Reward 2", points: 200, amount: 20 },
+            { id: 3, name: "Reward 3", points: 300, amount: 30 }
+        ];
+
+        // Function to reduce user points and claim a reward
+        function claimReward(pointsToDeduct, rewardAmount) {
+            const pointsElement = document.getElementById('points');
+
+            if (user.points >= pointsToDeduct) {
+                user.points -= pointsToDeduct;
+                console.log(`Congratulations! You claimed ${rewardAmount}$ for ${pointsToDeduct} points.`);
+                console.log(`Your remaining points: ${user.points}`);
+            } else {
+                console.log("Insufficient points to claim the reward.");
+            }
+
+            pointsElement.textContent = user.points; // Update the points display
+        }
+
+        // Example usage
+        console.log(`User Points: ${user.points}`);
+
+        // Event listener for the redeem button
+        document.addEventListener('DOMContentLoaded', function () {
+            const redeemButton = document.getElementById('redeemButton');
+            const rewardSelect = document.getElementById('rewardSelect');
+
+            redeemButton.addEventListener('click', function () {
+                const selectedRewardId = parseInt(rewardSelect.value, 10);
+                const selectedReward = rewards.find(reward => reward.id === selectedRewardId);
+
+                if (selectedReward) {
+                    claimReward(selectedReward.points, selectedReward.amount);
+                } else {
+                    console.log("Invalid reward selection.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

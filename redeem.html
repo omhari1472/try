@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Revive</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #eee;
+      font-family: 'Lily Script One';
+    }
+
+    /* reward-card */
+
+    .card {
+      /* position: absolute; */
+
+      /* top: 50%;
+  left: 50%; */
+      width: 250px;
+      height: 250px;
+      /* width: 15vw;
+  height: 30vh; */
+      margin: 12px 2px;
+      float: left;
+      perspective: 500px;
+    }
+
+    .content {
+      /* position: absolute; */
+
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .content {
+      transform: rotateY(180deg);
+      transition: transform 0.5s;
+    }
+
+    .front {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #a3f2ac;
+      line-height: 300px;
+      color: black;
+      text-align: center;
+      font-size: 35px;
+      border-radius: 5px;
+      backface-visibility: hidden;
+    }
+
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: white;
+      line-height: 300px;
+      color: black;
+      text-align: center;
+      font-size: 15px;
+      border-radius: 5px;
+      backface-visibility: hidden;
+    }
+
+    .back {
+      background: white;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    #sideWidth {
+      margin-top: 0px;
+      margin-left: 115px;
+      margin-bottom: 0px;
+
+    }
+
+    /* reward-card */
+    h1 {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: 800;
+      font-size: 72px;
+    }
+
+    .redeemButton {
+      width: 4;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <section id="header">
+
+    <!-- <a href=""><img src="logo.png"  width ="55px"   alt="logo"></a>
+    <div>
+        <ul id ="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+         
+        </ul>
+    </div> -->
+
+    <div>
+      <nav class="navbar navbar-expand-lg" style="background-color:#a3f2ac;">
+        <!-- <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="greenReviveLOGO.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
+                <b>GreenRevive</b>
+              </a>
+            </div> -->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">GreenRevive</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reward.html">Reward</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">LOGIN</a>
+              </li>
+              <li>
+                <a class="nav-link" href="user.html">SIGN UP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1>Reward</h1>
+      <hr>
+
+      <!-- <section class="section-1">
+          <div class="card  "  >
+            <div class="content">
+              <div class="front">
+                Front
+              </div>
+              <div class="back">
+                Back!
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+      <section class="section-1" id="sideWidth">
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 1
+            </div>
+            <div class="back">
+
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 5
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 10
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 15
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 20
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 25
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 30
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 35
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 40
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+        <div class="card  ">
+          <div class="content">
+            <div class="front">
+              Level 45
+            </div>
+            <div class="back">
+              <button type="button" class="btn btn-outline-success">Redeem</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="card  "  >
+            <div class="content">
+              <div class="front">
+                Front
+              </div>
+              <div class="back">
+                Back!
+              </div>
+            </div>
+          </div> -->
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="reward.js"></script>
+
+</html>

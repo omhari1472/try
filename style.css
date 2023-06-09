@@ -1,0 +1,221 @@
+:root {
+  --background-color: #DDF9FE;
+  --text-color: #f68449;
+  --button-color: #09184d;
+  --design-color: rgba(255, 191, 132, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+button{
+  border: none;
+  border-radius: 16px;
+}
+input{
+  border: none;
+}
+/* loginpage css */
+.login-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.loginimg{
+    width: 50%;
+    height: 100vh;;
+    background-color: #DDF9FE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    padding-top: 3rem;
+}
+.loginimg h2{
+    padding: 0.8rem;
+}
+.loginimg h1{
+    color: var(--button-color);
+    padding-bottom: 2rem;
+}
+.loginimg img{
+    width: 80%;
+    margin: 0 auto;
+}
+.logininput{
+    width:50%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 4rem;
+    /* color: #ffff; */
+}
+
+.logininput img{
+    width:9rem;
+}
+.logininput form{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
+.logininput form input {
+    width: 50%;
+    margin: 1rem 0;
+    text-align: center;
+}
+.loginbutton{
+    text-align: center;
+    border: none;
+    margin: auto;
+    font-size: larger;
+    background-color: #09184d;
+    color: #fff;
+    border-radius: 4px;
+    padding: .2rem 2.5rem;
+}
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    align-items: center;
+    padding:.7rem 0;
+}
+.checkbox span{
+    display: flex;
+    color: #000;
+}
+.text-element{
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    padding-left: .6rem;
+}
+.design2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 8rem;
+    z-index: 23;
+}
+.design3{
+    position: absolute;
+    left: 0;
+    width: 8rem;
+}
+#msg{
+  font-size: smaller;
+  color: red;
+}
+/* loginpage css */
+ 
+/* signuppagecss */
+.signup-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.signupimg{
+    width: 50%;
+    height: 100vh;;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    right: 0;
+}
+.signupinput{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+.signupinput form{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+.signupinput form input {
+    width: 50%;
+    margin: .5rem 0;
+    text-align: center;
+}
+.signupinput button{
+    margin: .7rem 0;
+}
+.signupinput h3{
+    margin-top: .6rem;
+}
+.signupimg h2{
+    padding: rem;
+}
+.signupimg h1{
+    color: var(--button-color);
+}
+.signupimg img{
+    width: 80%;
+    margin: 0 auto;
+}
+.or{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.or hr{
+    width:7rem;
+    background-color: var(--text-color);
+}
+.design4{
+    position: absolute;
+    right: 0;
+    width: 8rem;
+    z-index: 23;
+}
+.design6{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 8rem;
+}
+
+
+/* signuppagecss */
+
+/* indexpage */
+
+.welcomehero{
+    position: absolute;
+    right:0;
+    width: 50%;
+    background:url(/assets/img/welcomehero.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.welcomehero img{
+    width: 100%;
+    padding-left: 2rem;
+}
+
+/* indexpage */

@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+
+/* Header Start */
+/* #header
+{
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#8df699;
+  box-shadow: 0 8px 8px -4px lightblue;
+  position:relative;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+#header img{
+  margin: 15px 25px;
+  border-radius: 5px;
+} */
+/* 
+#navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px;
+  margin: 2px 2px;
+}
+#navbar li {
+  padding: 0px 15px;
+  list-style: none;
+}
+
+#navbar li a{
+text-decoration: none;
+font-weight: 600;
+font-size: 16px;
+color: #1a1a1a;
+}
+
+
+#navbar li a:hover{
+  color: #088178;
+  transition: 0,3s ease;
+} */
+/* Header End */
+
+
+
+#header a{
+  font-weight: 600;
+  font-family: "Spartan", sans-serif;
+
+}
+
+/* Home Page */
+
+#hero{
+  background-image: url("./assets/img/hero.jpg");
+  filter: brightness(90%);
+  width: 100vw;
+  height: 100vh;
+  background-position: top 5% right 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+
+}
+#hero{
+  display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction: column;
+ padding: 0px 80px;
+
+}
+#hero h4{
+  padding-bottom: 15px;
+  color: black;
+  font-size:24px ;
+  font-weight: 650;
+}
+#hero h2{
+   color:black;
+   font-weight: 650;
+}
+#hero h1{
+color:#088178;
+font-weight: 650;
+}
+#hero p{
+color: rgba(0, 0, 0, 0.79);
+font-weight:500;
+}
+
+/* Home page end */
+
+.profileimg{
+    background: white;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 2rem;
+    padding: 0.1rem;
+}
+button{
+    background: transparent;
+    border-radius: 6px;
+    padding: 0.4rem;
+}
